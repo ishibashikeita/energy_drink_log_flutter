@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- アプリ内で使用するカラーを管理するファイルです -->
+<resources>
+    <!-- メイン系 -->
+    <color name="main_color">#00387b</color>
+    <color name="sub_color">#a1a1a0</color>
+    <color name="scaffold_back_ground">#f8f8f8</color>
+    <color name="box_shadow">#DDDDDD</color>
+
+ 
+ 
+
+</resources>
