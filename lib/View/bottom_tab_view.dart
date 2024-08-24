@@ -1,6 +1,7 @@
 import 'package:energy_drink_log/Controller/bottom_tab_controller.dart';
 import 'package:energy_drink_log/View/Component/custom_cell.dart';
 import 'package:energy_drink_log/View/Component/custom_text.dart';
+import 'package:energy_drink_log/gen/assets.gen.dart';
 import 'package:energy_drink_log/gen/colors.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -25,46 +26,14 @@ class BottomTabBarView extends ConsumerWidget {
         ),
       ),
       backgroundColor: ColorName.scaffoldBackGround,
-      body: Container(
-          child: Center(
-        child: Column(
-          children: [
-            SizedBox(
-              width: 300,
-              height: 100,
-              child: CustomCell(
-                content: CustomText(text: '記録'),
-              ),
-            ),
-            SizedBox(
-              width: 300,
-              height: 100,
-              child: CustomCell(
-                content: CustomText(text: '記録'),
-              ),
-            ),
-            SizedBox(
-              width: 300,
-              height: 100,
-              child: CustomCell(
-                content: CustomText(text: '記録'),
-              ),
-            ),
-            SizedBox(
-              width: 300,
-              height: 100,
-              child: CustomCell(
-                content: CustomText(text: '記録'),
-              ),
-            ),
-          ],
-        ),
-      )),
+      body: controller.getBodys(controller.currentIndex),
       bottomNavigationBar: Stack(
         alignment: Alignment.center,
         clipBehavior: Clip.none,
         children: [
           NavigationBar(
+            indicatorColor: Colors.transparent,
+            indicatorShape: const CircleBorder(),
             destinations: controller.getBottomNavigationBarItems(),
             selectedIndex: controller.currentIndex,
             onDestinationSelected: (value) =>
@@ -93,18 +62,14 @@ class BottomTabBarView extends ConsumerWidget {
                     ),
                   ],
                 ),
-                child: const Column(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      Icons.camera_alt,
+                    Assets.images.yomitoriIcon.image(width: 40, height: 40),
+                    const CustomText(
+                      text: '読み取り',
                       color: Colors.white,
-                      size: 40,
-                    ),
-                    CustomText(
-                      text: '記録',
-                      color: Colors.white,
-                      fontSize: 12,
+                      fontSize: 10,
                     ),
                   ],
                 ),
