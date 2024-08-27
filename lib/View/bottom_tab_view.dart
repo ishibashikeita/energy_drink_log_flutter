@@ -14,6 +14,14 @@ class BottomTabBarView extends ConsumerWidget {
     final BottomTabBarContoller controller = ref.watch(bottomTabProvider);
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              // 使い方画面を表示
+            },
+            icon: const Icon(Icons.info),
+          ),
+        ],
         backgroundColor: Colors.white,
         elevation: 0,
         //下線を表示
