@@ -8,9 +8,9 @@
     <color name="box_shadow">#DDDDDD</color>
     
     <!-- エナドリの色 -->
-    <color name="monster_color">#46d100</color>
-    <color name="red_bull_color">#002bff</color>
-    <color name="zone_color">#1a1a1a</color>
+    <color name="monster_color">#95D600</color>
+    <color name="red_bull_color">#51BAE6</color>
+    <color name="zone_color">#493f4d</color>
 
 
 

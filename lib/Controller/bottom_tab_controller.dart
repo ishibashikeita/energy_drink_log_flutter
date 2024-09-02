@@ -1,10 +1,10 @@
-import 'package:energy_drink_log/Controller/Profile/profile_controller.dart';
 import 'package:energy_drink_log/View/Record/record_view.dart';
 import 'package:energy_drink_log/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../Service/log_service.dart';
+import '../View/Profile/profile_view.dart';
 
 /// BottomTabの選択状態を管理するProvider
 final bottomTabProvider = ChangeNotifierProvider<BottomTabBarContoller>(
